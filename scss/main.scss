@@ -1,0 +1,9 @@
+@import 'mixVariables.scss'; //변수,믹스인을 제일 처음에(모든 scss파일에 main파일에 모이게 됨)
+@import 'reset.scss';
+@import 'layout.scss';
+@import 'component.scss';
+
+
+@import 'index.scss';
+@import 'chat.scss';
+@import 'chatlist.scss';

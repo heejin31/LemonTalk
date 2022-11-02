@@ -1,0 +1,84 @@
+.login_container {
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+}
+
+.login {    
+    height: 100%;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    // text-align: center; 
+
+    .login_logo {
+        height: 200px;
+        background: {
+            image: url("../img/pngwing.com.png"); /*컴파일 된 이후의 경로*/
+            repeat: no-repeat;
+            position: center;
+            size: auto 100%;
+        }
+    margin-bottom: -10px;    
+    }
+
+    .login_account {
+        font-size: 0.8em;
+        color: $opacityBlack;
+        a {
+            color: $gray1;
+        }
+        text-align: center;
+    }
+}
+
+.login_form {    
+    width: 240px;
+    margin: 0 auto 80px;
+    font-size: 0.8em;
+
+    input {
+        width: 240px;
+        height: 40px;
+        border: 1px solid $opacityBlack;
+
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $gray2;
+        }
+    }
+
+    .login_form_id {
+        border-radius: 3px 3px 0 0 ;
+        border-bottom: none;
+        padding-left: 10px;
+    }
+    .login_form_pw {
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid $gray3;
+        padding-left: 10px;
+        margin-bottom: 7px;
+    }
+    .login_form_btn {
+        background-color:$main-color;
+        color: #fff;
+
+        &:hover {
+            background-color: rgba(60, 143, 1, 0.7);
+            color: #000;
+        }
+    }
+    .login_form_check {
+        width: 15px;
+        vertical-align: middle;
+        //appearance: unset; 체크박스의 기본설정이 되어있는 모양을 다 없애줌->그후에는 내가 하나하나 모양 만들어주기
+    }
+    
+    label {
+        color: $gray1;
+    } 
+
+}

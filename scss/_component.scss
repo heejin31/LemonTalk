@@ -1,0 +1,66 @@
+.preview {
+    display: flex;
+    padding: 15px;       
+    position: relative;
+
+    .preview_column {
+        .preview_pic {
+            @include set-box(50px,50px,16px);
+            
+            background-color:$main-color;
+            margin-right: 15px;
+        }
+        .preview_nick {
+            width: 50vw;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+
+            //한줄만 보이게하기(나머지는 줄임말로...)
+            white-space: nowrap;  //길이가 길어도 한줄만 나타내고 싶을때(가로길이가 설정되어있을때 사용가능)
+            overflow: hidden; //길이가 길어도 한줄만 나타내고 싶을때(가로길이가 설정되어있을때 사용가능)
+            text-overflow: ellipsis; //길이가 길어도 한줄만 나타내고 싶을때(가로길이가 설정되어있을때 사용가능)
+        }
+        .preview_msg {
+            width: 50vw;
+            font-size: 0.82em;
+            color: $gray1;
+
+            //두줄만 보이게 하기(나머지는 줄임말로...)
+            display: -webkit-box;  //길이가 길어도 그중 특정 줄만큼만 나타내고 싶을때
+            word-wrap: break-word; //길이가 길어도 그중 특정 줄만큼만 나타내고 싶을때
+            -webkit-line-clamp: 3; //몇줄 나타낼지
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .preview_time {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 0.7em;
+            color: $gray2;
+        }
+    }
+}
+
+.bubble {
+    @include set-box(auto,100%, 5px);
+
+    background: #fff;
+    box-shadow: 2px 2px 3px $opacityBlack;
+    position: relative;
+    padding: 10px;
+    font-size: 0.9em;
+
+    &::before {                     //말풍선 꼬리모양 만들기
+        @include set-box(0,0);
+
+        position: absolute;        
+        content: "";
+        top: 10px;
+        left: -10px;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #fff;        
+    }
+}

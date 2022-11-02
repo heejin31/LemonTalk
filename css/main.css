@@ -1,0 +1,296 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GmarketSansMedium";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 350px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  height: 100%;
+  width: 70px;
+  border-radius: 0;
+  background-color: #e6e6e6;
+  position: fixed;
+  padding-top: 50px;
+}
+.nav .nav_list .nav_btn {
+  text-align: center;
+  padding: 14px 0;
+  color: #a3a3a3;
+}
+.nav .nav_list .nav_btn.active {
+  color: #000;
+}
+
+.header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 55px 20px 20px;
+  z-index: 10;
+}
+.header .header_title {
+  font: size 1.4em;
+}
+.header .header_menu span {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+}
+.header .header_menu span:hover {
+  background-color: #e6e6e6;
+}
+
+.preview {
+  display: flex;
+  padding: 15px;
+  position: relative;
+}
+.preview .preview_column .preview_pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 16px;
+  background-color: #3c8f01;
+  margin-right: 15px;
+}
+.preview .preview_column .preview_nick {
+  width: 50vw;
+  font-size: 0.85em;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preview .preview_column .preview_msg {
+  width: 50vw;
+  font-size: 0.82em;
+  color: #535353;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preview .preview_column .preview_time {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 0.7em;
+  color: #a3a3a3;
+}
+
+.bubble {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 10px;
+  font-size: 0.9em;
+}
+.bubble::before {
+  height: 0;
+  width: 0;
+  border-radius: 0;
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: -10px;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff;
+}
+
+.login_container {
+  width: 100%;
+  height: 100%;
+  background-color: #FAE100;
+}
+
+.login {
+  height: 100%;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login .login_logo {
+  height: 200px;
+  background-image: url("../img/pngwing.com.png"); /*컴파일 된 이후의 경로*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  margin-bottom: -10px;
+}
+.login .login_account {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.login .login_account a {
+  color: #535353;
+}
+
+.login_form {
+  width: 240px;
+  margin: 0 auto 80px;
+  font-size: 0.8em;
+}
+.login_form input {
+  width: 240px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.login_form input:focus {
+  outline: none;
+}
+.login_form input::placeholder {
+  color: #a3a3a3;
+}
+.login_form .login_form_id {
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+  padding-left: 10px;
+}
+.login_form .login_form_pw {
+  border-radius: 0 0 3px 3px;
+  border-top: 1px solid #e6e6e6;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+.login_form .login_form_btn {
+  background-color: #3c8f01;
+  color: #fff;
+}
+.login_form .login_form_btn:hover {
+  background-color: rgba(60, 143, 1, 0.7);
+  color: #000;
+}
+.login_form .login_form_check {
+  width: 15px;
+  vertical-align: middle;
+}
+.login_form label {
+  color: #535353;
+}
+
+.chat {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.chat_screen {
+  height: calc(100% - 140px);
+  overflow: auto;
+  background-color: #fbfc9c;
+}
+.chat_screen .chat_screen_bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.chat_screen .chat_screen_bar .chat_nick {
+  font-size: 1em;
+}
+
+.chat_user {
+  background-color: #fbfc9c;
+}
+
+.bubble_container {
+  padding-top: 20px;
+}
+
+.bubble_wrap {
+  display: flex;
+}
+.bubble_wrap .bubble_content {
+  width: 80%;
+  max-width: 700px;
+}
+.bubble_wrap .bubble_time {
+  font-size: 0.7em;
+  display: flex;
+  align-items: self-end;
+  padding-left: 6px;
+}
+
+.chat_form {
+  background: #fff;
+  height: 140px;
+  padding: 10px;
+}
+.chat_form .chat_form_msg {
+  height: 75px;
+  width: 100%;
+  border-radius: 0;
+  resize: none;
+  border: none;
+  outline: none;
+  margin-bottom: 8px;
+}
+.chat_form .chat_form_util {
+  display: flex;
+  justify-content: space-between;
+}
+.chat_form .chat_form_util .chat_form_util_plugin i {
+  margin-right: 10px;
+  color: #a3a3a3;
+  line-height: 30px;
+}
+.chat_form .chat_form_util .chat_form_util_submit .chat_form_btn {
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  border: none;
+  color: #535353;
+}
+
+.chats {
+  margin-left: 70px;
+}
+
+a.preview_wrap {
+  color: #000;
+}
+a.preview_wrap:first-child > .preview {
+  background: #faf9f9;
+}
+a.preview_wrap .preview:hover {
+  background: #e6e6e6;
+}
+a.preview_wrap .preview img {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */

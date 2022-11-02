@@ -1,0 +1,50 @@
+.nav {
+    @include set-box(100%, 70px);
+
+    background-color: $gray3;
+    position: fixed;
+    padding-top: 50px;
+
+    .nav_list {
+
+        .nav_btn {
+            text-align: center;
+            padding: 14px 0;
+            color: $gray2;
+
+            &.active {
+                color: #000;
+                
+            }
+        }
+    }
+
+}
+
+.header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: sticky; //좌표값이 지정된 순간부터 고정
+    top: 0;  //좌표값이 지정된 순간부터 고정
+    padding:55px 20px 20px;
+    z-index: 10;
+
+    .header_title {
+        font:size 1.4em;
+    }
+    .header_menu {
+        span {
+            @include set-box(36px, 36px, 18px);
+
+            display: inline-block;            
+            text-align: center;
+            line-height: 36px; //세로가운데
+            cursor: pointer;
+
+            &:hover {
+                background-color: $gray3;
+            }
+        }
+    }
+}
